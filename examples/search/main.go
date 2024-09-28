@@ -15,5 +15,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("res: %v\n", res)
+	fmt.Printf("TOTAL RESULTS: %d\n", res.Results)
+	for _, ref := range res.References {
+		fmt.Printf("[%s] %s (%s) @ %s\n", ref.Category, ref.Title, ref.PubDate, ref.Conference)
+	}
 }

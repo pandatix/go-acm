@@ -5,7 +5,9 @@ go 1.23.1
 require (
 	github.com/antchfx/htmlquery v1.3.2
 	github.com/gorilla/schema v1.4.1
+	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.9.0
+	go.uber.org/multierr v1.11.0
 )
 
 require (
