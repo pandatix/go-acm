@@ -14,9 +14,11 @@ import (
 
 type (
 	SearchParams struct {
-		Request   string `schema:"AllField"`
-		StartPage *int   `schema:"startPage,omitempty"`
-		PageSize  *int   `schema:"pageSize,omitempty"`
+		Request    string `schema:"AllField"`
+		StartPage  *int   `schema:"startPage,omitempty"`
+		PageSize   *int   `schema:"pageSize,omitempty"`
+		BeforeYear *int   `schema:"BeforeYear,omitempty"`
+		AfterYear  *int   `schema:"AfterYear,omitempty"`
 	}
 
 	SearchResponse struct {
