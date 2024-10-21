@@ -32,7 +32,7 @@ type (
 		Abstract   string
 		DOI        *string
 		PubDate    string
-		Conference string
+		Conference *string
 		OpenAccess bool
 		FreeAccess bool
 		Metrics    ReferenceMetrics
@@ -123,9 +123,10 @@ func (client *ACMClient) Search(params *SearchParams, opts ...Option) (*SearchRe
 		conferences := htmlquery.Find(li, "//span[contains(@class, 'epub-section__title')]")
 		switch len(conferences) {
 		case 0:
-			rmerr = multierr.Append(rmerr, errors.New("conference not found"))
+			// Is okay (e.g., doctoral thesis are not published at a conference)
 		case 1:
-			ref.Conference = htmlquery.InnerText(conferences[0])
+			conf := htmlquery.InnerText(conferences[0])
+			ref.Conference = &conf
 		default:
 			rmerr = multierr.Append(rmerr, errors.New("too many conferences match"))
 		}
