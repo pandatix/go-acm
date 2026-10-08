@@ -7,8 +7,8 @@ replace github.com/pandatix/go-acm => ../..
 require github.com/pandatix/go-acm v0.0.0-00010101000000-000000000000
 
 require (
-	github.com/antchfx/htmlquery v1.3.6 // indirect
-	github.com/antchfx/xpath v1.3.6 // indirect
+	github.com/antchfx/htmlquery v1.3.7 // indirect
+	github.com/antchfx/xpath v1.3.9 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/gorilla/schema v1.4.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
